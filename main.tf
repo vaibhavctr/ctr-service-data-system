@@ -72,8 +72,8 @@ module "apim" {
   location                  = azurerm_resource_group.rg.location
   publisher_name            = var.publisher_name
   publisher_email           = var.publisher_email
-  sku_name_apim             = var.sku_name_apim
-  sku_capacity_apim         = var.sku_capacity_apim
+  sku_name                  = var.sku_name_apim
+  sku_capacity              = var.sku_capacity_apim
   user_assigned_identity_id = var.user_assigned_identity_id
   environment               = var.environment # Pass the environment variable
 }
