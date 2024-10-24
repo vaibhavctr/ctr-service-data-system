@@ -25,8 +25,7 @@ api_management_name       = "ctr-dev-cc-apim"
 publisher_name            = "Dev Publisher"
 publisher_email           = "v-vaibhav.mishra@circlek.com"
 user_assigned_identity_id = "/subscriptions/a1fd2c95-863c-4813-929e-e73460c55005/resourceGroups/ctr-rg-sandbox/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ctrmanagedidentity"
-sku_name                  = "Developer"
-sku_capacity              = 1
+sku_name                  = "Developer_1"
 
 ######################################################################
 

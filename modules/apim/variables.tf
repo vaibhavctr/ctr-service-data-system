@@ -28,10 +28,6 @@ variable "sku_name" {
   type        = string
 }
 
-variable "sku_capacity" {
-  description = "The capacity for the API Management SKU (e.g., 1 for Developer or Standard)"
-  type        = number
-}
 
 variable "user_assigned_identity_id" {
   description = "The ID of the User Assigned Managed Identity to be linked with APIM"
