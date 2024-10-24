@@ -37,10 +37,35 @@ terraform.tfvars
 *.pem
 *.key
 
-# Include folders (modules and environments) to ensure they are tracked
-# Negating the rule, so these directories are always included
+# Ensure folders (modules and environments) are tracked
+# Negating the rule, so these directories and their content are always included
 !modules/
+!modules/**/*
 !environments/
+!environments/**/*
 
 # Ensure .gitignore itself is tracked
 !.gitignore
+
+# Exclude large or unwanted files that shouldn't be committed
+# Ignore binaries and large files (e.g., archives, packages)
+*.zip
+*.tar.gz
+*.tar
+*.rar
+*.exe
+*.dll
+*.iso
+*.img
+
+# Ignore macOS-specific system files
+.DS_Store
+
+# Ignore Linux and Windows system files
+*.swp
+*.swo
+Thumbs.db
+
+# Ignore log files and system backup files
+*.bak
+*.tmp
