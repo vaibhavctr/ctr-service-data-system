@@ -38,3 +38,7 @@ variable "location" {
   description = "The location where the resources will be deployed"
   type        = string
 }
+variable "sku_tier_eventhub" {
+  description = "The tier for the EventHub namespace"
+  type        = string
+}

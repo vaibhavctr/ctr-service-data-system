@@ -56,6 +56,9 @@ module "eventhub" {
   eventhub_name           = var.eventhub_name
   resource_group_name     = azurerm_resource_group.rg.name
   location                = azurerm_resource_group.rg.location
+  eventhub_sku_name       = var.eventhub_sku_name
+  partition_count         = var.partition_count
+  message_retention       = var.message_retention
 }
 
 # Call the module for the APIM (Azure API Management)
