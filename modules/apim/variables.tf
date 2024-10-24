@@ -23,12 +23,12 @@ variable "publisher_email" {
   type        = string
 }
 
-variable "sku_name_apim" {
+variable "sku_name" {
   description = "The SKU name for API Management (e.g., Developer, Standard, Premium)"
   type        = string
 }
 
-variable "sku_capacity_apim" {
+variable "sku_capacity" {
   description = "The capacity for the API Management SKU (e.g., 1 for Developer or Standard)"
   type        = number
 }
