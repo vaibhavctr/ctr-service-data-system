@@ -5,8 +5,8 @@ resource "azurerm_api_management" "apim" {
   publisher_name      = var.publisher_name
   publisher_email     = var.publisher_email
 
-  # Define the SKU name and capacity directly as arguments
-  sku_name     = "Developer_1"  # Specify the SKU name
+  # Use variables for SKU configuration
+  sku_name     = var.sku_name    # Use the sku_name variable directly
 
   # Use User Assigned Managed Identity
   identity {

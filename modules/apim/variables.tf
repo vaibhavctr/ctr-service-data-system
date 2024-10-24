@@ -4,32 +4,33 @@ variable "api_management_name" {
 }
 
 variable "resource_group_name" {
-  description = "The name of the resource group where APIM will be deployed"
+  description = "The name of the resource group"
   type        = string
 }
 
 variable "location" {
-  description = "The Azure region where the APIM instance will be deployed"
+  description = "The location where the resources will be deployed"
   type        = string
 }
 
 variable "publisher_name" {
-  description = "The name of the publisher for the APIM instance"
+  description = "The publisher name for the API Management instance"
   type        = string
 }
 
 variable "publisher_email" {
-  description = "The email of the publisher for the APIM instance"
+  description = "The publisher email for the API Management instance"
   type        = string
 }
 
 variable "sku_name" {
-  description = "The SKU for API Management (e.g., Developer, Standard)"
+  description = "The SKU name for API Management (e.g., Developer, Standard, Premium)"
   type        = string
 }
 
+
 variable "user_assigned_identity_id" {
-  description = "The ID of the User Assigned Managed Identity for APIM"
+  description = "The ID of the User Assigned Managed Identity to be linked with APIM"
   type        = string
 }
 
