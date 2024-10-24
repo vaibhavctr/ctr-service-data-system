@@ -43,6 +43,7 @@ sku_name_eventhub       = "Standard"
 sku_tier_eventhub       = "Standard"
 partition_count         = 2          # Number of partitions for the EventHub
 message_retention       = 7          # Retain messages for 7 days
+sku_capacity_eventhub   = 1
 
 ######################################################################
 
