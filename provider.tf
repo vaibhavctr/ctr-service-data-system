@@ -2,7 +2,7 @@
 provider "azurerm" {
   features {}
 
-  # Optionally, configure the subscription and tenant details
+  # Configure the subscription and tenant details
   subscription_id = var.subscription_id # Specify the subscription ID
   tenant_id       = var.tenant_id       # Optional tenant ID
 }
