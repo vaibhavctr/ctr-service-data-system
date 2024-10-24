@@ -73,7 +73,6 @@ module "apim" {
   publisher_name            = var.publisher_name
   publisher_email           = var.publisher_email
   sku_name                  = var.sku_name
-  sku_capacity              = var.sku_capacity
   user_assigned_identity_id = var.user_assigned_identity_id
   environment               = var.environment # Pass the environment variable
 }
