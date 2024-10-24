@@ -1,4 +1,4 @@
-# Define the required Terraform version and provider configuration
+# Define the required Terraform version
 terraform {
   required_providers {
     azurerm = {
