@@ -10,6 +10,12 @@ variable "tenant_id" {
   default     = null
 }
 
+# Define variables for the Managed Identity client ID
+variable "user_assigned_identity_client_id" {
+  description = "The Client ID of the User Assigned Managed Identity"
+  type        = string
+}
+
 variable "storage_account_name" {
   description = "The storage account where the state file is stored"
   type        = string
