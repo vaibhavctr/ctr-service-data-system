@@ -59,6 +59,9 @@ module "eventhub" {
   eventhub_sku_name       = var.eventhub_sku_name
   partition_count         = var.partition_count
   message_retention       = var.message_retention
+  sku_name_eventhub       = var.sku_name_eventhub
+  sku_tier_eventhub       = var.sku_tier_eventhub
+  sku_capacity_eventhub   = var.sku_capacity_eventhub
 }
 
 # Call the module for the APIM (Azure API Management)

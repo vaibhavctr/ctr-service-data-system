@@ -17,6 +17,10 @@ variable "sku_capacity_eventhub" {
   description = "The capacity for the EventHub (e.g., 1, 2, etc. for Standard/Premium tiers)"
   type        = number
 }
+variable "sku_tier_eventhub" {
+  description = "The SKU tier for EventHub"
+  type        = string
+}
 
 variable "partition_count" {
   description = "The number of partitions for the EventHub"
