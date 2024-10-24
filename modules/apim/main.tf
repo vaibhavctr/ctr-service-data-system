@@ -6,8 +6,8 @@ resource "azurerm_api_management" "apim" {
   publisher_email     = var.publisher_email
 
   # Use variables for SKU configuration
-  sku_name    = var.sku_name    # Use the sku_name variable directly
-  sku_capacity = var.sku_capacity  # Use the sku_capacity directly (optional)
+  sku_name_apim    = var.sku_name    # Use the sku_name variable directly
+  sku_capacity_apim = var.sku_capacity  # Use the sku_capacity directly (optional)
 
   # Use User Assigned Managed Identity
   identity {
