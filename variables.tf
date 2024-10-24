@@ -122,11 +122,6 @@ variable "sku_capacity_apim" {
   type        = number
 }
 
-variable "user_assigned_identity_id" {
-  description = "The ID of the User Assigned Managed Identity to be linked with APIM"
-  type        = string
-}
-
 variable "environment" {
   description = "The environment tag (e.g., Dev, QA, Prod)"
   type        = string
