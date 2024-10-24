@@ -2,15 +2,14 @@ resource "azurerm_function_app" "function_app" {
   name                      = var.function_app_name
   location                  = var.location
   resource_group_name       = var.resource_group_name
-  app_service_plan_id       = azurerm_app_service_plan.app_service_plan.id
-  storage_account_name      = azurerm_storage_account.storage.name
-  storage_account_access_key = azurerm_storage_account.storage.primary_access_key
+  app_service_plan_id       = var.app_service_plan_id  # Use the variable
+  storage_account_name      = var.storage_account_name  # Use the variable
+  storage_account_access_key = var.storage_account_access_key  # Use the variable
   version                    = "~4"
   os_type                    = "linux"
 
   site_config {
-    # Set the runtime stack to Java
-    linux_fx_version = "JAVA|11"  # Use the appropriate version, e.g., Java 8 or Java 11
+    linux_fx_version = "DOCKER|microsoft/azure-functions-java11"
   }
 
   app_settings = {

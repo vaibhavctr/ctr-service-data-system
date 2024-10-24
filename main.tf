@@ -31,10 +31,11 @@ module "storage_account" {
 # Call the module for the Azure Function App
 module "function_app" {
   source                    = "./modules/function_app"
-  resource_group_name       = azurerm_resource_group.rg.name
-  location                  = azurerm_resource_group.rg.location
-  storage_account_name      = var.storage_account_name
-  app_service_plan_name     = var.app_service_plan_name
+  resource_group_name       = azurerm_resource_group.rg.name  # Pass the resource group from root
+  location                  = azurerm_resource_group.rg.location  # Pass the location from root
+  app_service_plan_id       = azurerm_app_service_plan.app_service_plan.id  # Pass the App Service Plan ID
+  storage_account_name      = azurerm_storage_account.storage.name  # Pass the storage account name
+  storage_account_access_key = azurerm_storage_account.storage.primary_access_key  # Pass the storage account access key
   function_app_name         = var.function_app_name
   package_url               = var.package_url
   user_assigned_identity_id = var.user_assigned_identity_id

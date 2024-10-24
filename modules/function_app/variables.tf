@@ -8,13 +8,18 @@ variable "location" {
   type        = string
 }
 
-variable "storage_account_name" {
-  description = "The name of the storage account"
+variable "app_service_plan_id" {
+  description = "The ID of the App Service Plan to associate with the Function App"
   type        = string
 }
 
-variable "app_service_plan_name" {
-  description = "The name of the app service plan"
+variable "storage_account_name" {
+  description = "The name of the storage account to use for the Function App"
+  type        = string
+}
+
+variable "storage_account_access_key" {
+  description = "The access key for the storage account to use for the Function App"
   type        = string
 }
 

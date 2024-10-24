@@ -31,8 +31,13 @@ variable "location" {
 
 
 # Function App variables
-variable "app_service_plan_name" {
-  description = "The name of the app service plan"
+variable "app_service_plan_id" {
+  description = "The App Service Plan ID for the function app"
+  type        = string
+}
+
+variable "storage_account_access_key" {
+  description = "The access key for the storage account"
   type        = string
 }
 
