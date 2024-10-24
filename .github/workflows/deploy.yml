@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: development  # Specify the environment here
+    environment: tf-modules  # Specify the environment here
 
     permissions:
       id-token: write  # Required for OIDC login
