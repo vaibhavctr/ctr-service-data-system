@@ -47,7 +47,7 @@ module "function_app" {
   location                  = azurerm_resource_group.rg.location  # Pass the location from root
   app_service_plan_id       = module.app_service_plan.app_service_plan_id  # Pass the App Service Plan ID
   storage_account_name      = azurerm_storage_account.storage.name  # Pass the storage account name
-  storage_account_access_key = azurerm_storage_account.storage.primary_access_key  # Pass the storage account access key
+  #storage_account_access_key = azurerm_storage_account.storage.primary_access_key  # Pass the storage account access key
   function_app_name         = var.function_app_name
   package_url               = var.package_url
   user_assigned_identity_id = var.user_assigned_identity_id
