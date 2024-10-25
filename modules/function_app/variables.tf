@@ -8,11 +8,6 @@ variable "location" {
   type        = string
 }
 
-variable "app_service_plan_id" {
-  description = "The ID of the App Service Plan to associate with the Function App"
-  type        = string
-}
-
 variable "storage_account_name" {
   description = "The name of the storage account to use for the Function App"
   type        = string

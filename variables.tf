@@ -55,6 +55,20 @@ variable "user_assigned_identity_id" {
   type        = string
 }
 
+variable "app_service_plan_name" {
+  description = "The name of the App Service Plan"
+  type        = string
+}
+
+variable "sku_tier" {
+  description = "The pricing tier for the App Service Plan (e.g., Free, Shared, Basic, Standard, Premium)"
+  type        = string
+}
+
+variable "sku_size" {
+  description = "The SKU size for the App Service Plan (e.g., Y1 for Dynamic tier)"
+  type        = string
+}
 ### EventHub variables ###
 variable "eventhub_namespace_name" {
   description = "The name of the EventHub namespace"

@@ -17,6 +17,8 @@ container_name       = "dev-state"
 app_service_plan_name = "ctr-dev-cc-asp"
 function_app_name     = "ctr-dev-cc-app"
 package_url           = "https://example.com/dev-functions-package.zip"
+sku_tier              = "Dynamic"
+sku_size              = "Y1"
 
 ######################################################################
 

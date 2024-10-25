@@ -28,17 +28,30 @@ module "storage_account" {
   container_name       = var.container_name
 }
 
+# Call the App Service Plan module
+module "app_service_plan" {
+  source              = "./modules/app_service_plan"
+  app_service_plan_name = var.app_service_plan_name
+  resource_group_name  = azurerm_resource_group.rg.name
+  location             = azurerm_resource_group.rg.location
+  sku_tier             = var.sku_tier
+  sku_size             = var.sku_size
+  environment          = var.environment
+}
+
+
 # Call the module for the Azure Function App
 module "function_app" {
   source                    = "./modules/function_app"
   resource_group_name       = azurerm_resource_group.rg.name  # Pass the resource group from root
   location                  = azurerm_resource_group.rg.location  # Pass the location from root
-  app_service_plan_id       = azurerm_app_service_plan.app_service_plan.id  # Pass the App Service Plan ID
+  app_service_plan_id       = module.app_service_plan.app_service_plan_id  # Pass the App Service Plan ID
   storage_account_name      = azurerm_storage_account.storage.name  # Pass the storage account name
   storage_account_access_key = azurerm_storage_account.storage.primary_access_key  # Pass the storage account access key
   function_app_name         = var.function_app_name
   package_url               = var.package_url
   user_assigned_identity_id = var.user_assigned_identity_id
+  environment               = var.environment
 }
 
 # Call the module for the Azure Data Explorer (ADX)
