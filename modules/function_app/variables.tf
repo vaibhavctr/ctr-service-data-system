@@ -36,3 +36,8 @@ variable "user_assigned_identity_id" {
   description = "The ID of the user-assigned managed identity to associate with the Function App"
   type        = string
 }
+
+variable "environment" {
+  description = "The environment tag (dev, prod, etc.)"
+  type        = string
+}
