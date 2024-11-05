@@ -10,6 +10,11 @@ variable "tenant_id" {
   default     = null
 }
 
+variable "client_id" {
+  description = "The Client ID for OIDC authentication"
+  type        = string
+}
+
 variable "storage_account_name" {
   description = "The storage account where the state file is stored"
   type        = string
