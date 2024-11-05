@@ -1,0 +1,48 @@
+name: Terraform Plan for Azure Deployment
+
+on:
+  push:
+    branches:
+      - features/tf-modules-v1  # Specify the branch that triggers the plan
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: dev
+
+    permissions:
+      id-token: write  # Required for OIDC login
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.3.0  # Specify the desired Terraform version
+
+      - name: Azure Login with OIDC
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}  # Application (client) ID from GitHub Secrets
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}  # Azure Tenant ID from GitHub Secrets
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}  # Azure Subscription ID from GitHub Secrets
+
+      - name: Run Terraform Fmt
+        run: terraform fmt -recursive
+
+      - name: Run Terraform Init
+        env:
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        run: terraform init -backend-config="environments/sandbox/backend.tfvars"
+
+      - name: Run Terraform Plan
+        env:
+          ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        run: terraform plan -var-file="environments/sandbox/terraform.tfvars" -out="tfplan" -input=false
