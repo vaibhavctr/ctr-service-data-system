@@ -45,10 +45,3 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         run: terraform plan -out=tfplan -input=false  # Save the plan to tfplan file for review
-
-      # Optional: Upload the Terraform plan as an artifact for review later
-      - name: Upload Terraform Plan
-        uses: actions/upload-artifact@v2
-        with:
-          name: tfplan
-          path: tfplan
