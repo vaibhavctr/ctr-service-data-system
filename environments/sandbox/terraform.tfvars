@@ -1,8 +1,8 @@
 resource_group_name              = "ctr-dev-westeu-rg"
 location                         = "West Europe"
 environment                      = "Development" # Specify the environment (dev, test, prod, etc.)
-subscription_id                  = "a1fd2c95-863c-4813-929e-e73460c55005"
-tenant_id                        = "deb87405-c3fd-48f8-af81-65ca6d8d8e57"
+subscription_id                  = "2ef25ed3-e720-486d-b108-694985080ca7"
+tenant_id                        = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
 
 
 ######################################################################
@@ -24,7 +24,7 @@ package_url           = "https://example.com/dev-functions-package.zip"
 api_management_name       = "ctr-dev-westeu-apim"
 publisher_name            = "Dev Publisher"
 publisher_email           = "v-vaibhav.mishra@circlek.com"
-user_assigned_identity_id = "/subscriptions/a1fd2c95-863c-4813-929e-e73460c55005/resourceGroups/ctr-rg-sandbox/providers/Microsoft.ManagedIdentity/userAssignedIdentities/ctrmanagedidentity"
+user_assigned_identity_id = "/subscriptions/2ef25ed3-e720-486d-b108-694985080ca7/resourceGroups/devctrrg01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/CTRManagedIdentity"
 sku_name                  = "Developer_1"
 
 ######################################################################
