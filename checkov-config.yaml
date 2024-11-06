@@ -2,6 +2,9 @@ check:
   - CKV_AZURE_1
   - CKV_AZURE_75
   - CKV_AZURE_11
+  - CKV_AZURE_180
+  - CKV_AZURE_75
+  - CKV_AZURE_173
 
 output:
   format: cli
