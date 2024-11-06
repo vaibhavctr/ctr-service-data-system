@@ -15,8 +15,11 @@ skip-check:
 
 # Configure output settings
 output:
-  format: cli            # Options: json, cli, junitxml, cyclonedx, sarif
-  output_path: ./checkov_report.json  # Output file location
+  - cli             # Use `cli` for standard console output
+  - json            # Output a JSON file
+  - junitxml        # Produce JUnit XML for integration with test tools
+
+output_path: "./checkov_report.json"  # The output file path for JSON format
 
 # Set severity threshold (optional)
 severity: HIGH           # Options: LOW, MEDIUM, HIGH, CRITICAL
