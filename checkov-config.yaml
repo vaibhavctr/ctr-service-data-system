@@ -8,16 +8,12 @@ check:
   - CKV_AZURE_180     # Ensure additional Azure checks are enforced as needed
   - CKV_AZURE_173     # Ensure API management uses at least TLS 1.2
   - CKV_AZURE_223     # Ensure Event Hub Namespace uses at least TLS 1.2
-  - CKV_AZURE_3       # Ensure that 'enable_https_traffic_only' is enabled
-  - CKV_AZURE_36      # Ensure 'Trusted Microsoft Services' is enabled for Storage Account access
   - CKV_AZURE_62      # Ensure function apps are not accessible from all regions
   - CKV_AZURE_145     # Ensure Function app is using the latest version of TLS encryption
   - CKV_AZURE_159     # Ensure function app builtin logging is enabled
   - CKV_AZURE_111     # Ensure that key vault enables soft delete
-  - CKV_AZURE_3       # Ensure that 'enable_https_traffic_only' is enabled
-  - CKV_AZURE_36      # Ensure 'Trusted Microsoft Services' is enabled for Storage Account access
 
 # Define checks to skip (optional)
 skip-check:
-  - CKV_AZURE_3       # Skip check for Azure Storage Accounts with public access
+  - CKV_AZURE_3       # Skip check for HTTPS traffic enforcement on Azure Storage Accounts
   - CKV_AZURE_4       # Skip check for SQL Server firewall rules allowing all IPs
