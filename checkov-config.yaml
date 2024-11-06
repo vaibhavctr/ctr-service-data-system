@@ -1,25 +1,7 @@
-# checkov-config.yaml
-
-# Define which policies to run (Azure-focused checks)
 check:
-  - CKV_AZURE_1       # Ensure no Azure VM has password authentication enabled
-  - CKV_AZURE_11      # Ensure 'Secure transfer required' is enabled for Azure Storage Accounts
-  - CKV_AZURE_75      # Ensure Azure Data Explorer uses double encryption
+  - CKV_AZURE_1
+  - CKV_AZURE_75
+  - CKV_AZURE_11
 
-# Define checks to skip (optional)
-skip-check:
-  - CKV_AZURE_3       # Skip check for Azure Storage Accounts with public access
-  - CKV_AZURE_4       # Skip check for SQL Server firewall rules allowing all IPs
-
-# Configure output format and path directly via CLI arguments instead of config
-# Run Checkov with CLI arguments for output and severity if needed
-
-# Framework filtering - only scan Terraform files and Azure resources
-framework:
-  - terraform           # Limit the scan to only Terraform files
-  - azure               # Azure-specific framework
-
-# Exclude unnecessary directories
-directory-exclude:
-  - .git                # Exclude the .git directory
-  - .terraform          # Exclude Terraform's hidden files
+output:
+  format: cli
