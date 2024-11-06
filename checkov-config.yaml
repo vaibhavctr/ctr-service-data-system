@@ -12,6 +12,12 @@ check:
   - CKV_AZURE_145     # Ensure Function app is using the latest version of TLS encryption
   - CKV_AZURE_159     # Ensure function app builtin logging is enabled
   - CKV_AZURE_111     # Ensure that key vault enables soft delete
+  - CKV_GHA_3         # Suspicious use of curl with secrets
+  - CKV_GHA_2         # Ensure run commands are not vulnerable to shell injection
+  - CKV_GHA_1         # Ensure ACTIONS_ALLOW_UNSECURE_COMMANDS isn't true on environment variables
+  - CKV_GHA_5         # Found artifact build without evidence of cosign sign execution in pipeline
+
+
 
 # Define checks to skip (optional)
 skip-check:
