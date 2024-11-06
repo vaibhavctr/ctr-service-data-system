@@ -1,3 +1,5 @@
+# checkov-config.yaml
+
 # Define which policies to run (Azure-focused checks)
 check:
   - CKV_AZURE_1       # Ensure that no Azure Virtual Machine has password authentication enabled
@@ -6,27 +8,27 @@ check:
   - CKV_AZURE_14      # Ensure that SQL servers have an Azure Active Directory admin set
   - CKV_AZURE_25      # Ensure AKS logging to Azure Monitoring is configured
 
-# Define checks to skip
+# Define checks to skip (optional)
 skip-check:
   - CKV_AZURE_3       # Skip check for Azure Storage Accounts with public access
   - CKV_AZURE_4       # Skip check for SQL Server firewall rules allowing all IPs
 
-# Configure output settings
+# Configure output settings for CLI use
 output:
-  format: cli          # Options: cli, csv, cyclonedx, json, etc.
+  format: cli         # Specify CLI output
+output-file-path: ./checkov_report.json  # Specify path for JSON output file
 
-# Filter checks by framework
+# Severity threshold (if supported by CLI usage)
+severity: HIGH        # Filter checks with a minimum severity level
+
+# Enable framework filtering to only Terraform and Azure resources
 framework:
-  - terraform          # Limit the scan to only Terraform files
-  - azure              # Azure-specific framework
+  - terraform
+  - azure
 
 # Exclude directories
 directory-exclude:
-  - .git               # Ignore the .git directory
-  - .terraform         # Ignore Terraform's hidden files
-  - test               # Ignore test directory
-  - examples           # Ignore example files
-
-# Set logging level to minimize output
-logging:
-  level: ERROR         # Set log level to ERROR to reduce noise
+  - .git
+  - .terraform
+  - test
+  - examples
