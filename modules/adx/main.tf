@@ -8,8 +8,8 @@ resource "azurerm_kusto_cluster" "adx_cluster" {
     capacity = var.capacity
   }
 
-  # Enable double encryption to pass the security check
-  enable_double_encryption = true
+  # Enable double encryption for enhanced security
+  double_encryption_enabled = true
 }
 
 resource "azurerm_kusto_database" "adx_database" {
