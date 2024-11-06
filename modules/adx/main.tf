@@ -7,6 +7,9 @@ resource "azurerm_kusto_cluster" "adx_cluster" {
     name     = var.sku_name
     capacity = var.capacity
   }
+
+  # Enable double encryption to pass the security check
+  enable_double_encryption = true
 }
 
 resource "azurerm_kusto_database" "adx_database" {
