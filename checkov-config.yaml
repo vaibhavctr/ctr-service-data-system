@@ -1,34 +1,29 @@
 # checkov-config.yaml
 
-# Define which policies to run (Azure-focused checks)
+# Define essential policies to run (basic Azure-focused checks)
 check:
-  - CKV_AZURE_1       # Ensure that no Azure Virtual Machine has password authentication enabled
-  - CKV_AZURE_75      # Ensure that Azure Data Explorer uses double encryption
-  - CKV_AZURE_11      # Ensure that 'Secure transfer required' is enabled for Azure Storage Accounts
-  - CKV_AZURE_14      # Ensure that SQL servers have an Azure Active Directory admin set
-  - CKV_AZURE_25      # Ensure AKS logging to Azure Monitoring is configured
+  - CKV_AZURE_1       # Ensure no Azure VM has password authentication enabled
+  - CKV_AZURE_11      # Ensure 'Secure transfer required' is enabled for Azure Storage Accounts
+  - CKV_AZURE_12      # Ensure managed identity authentication is enabled for App Service and Functions
+  - CKV_AZURE_13      # Ensure Cosmos DB accounts use private endpoints
+  - CKV_AZURE_14      # Ensure SQL servers have an Azure AD admin set
 
 # Define checks to skip (optional)
+# Skip any checks that are irrelevant or causing issues for basic validation
 skip-check:
   - CKV_AZURE_3       # Skip check for Azure Storage Accounts with public access
   - CKV_AZURE_4       # Skip check for SQL Server firewall rules allowing all IPs
 
-# Configure output settings for CLI use
+# Output format for the report (basic CLI output)
 output:
-  format: cli         # Specify CLI output
-output-file-path: ./checkov_report.json  # Specify path for JSON output file
+  format: cli        # Use CLI for local readability
 
-# Severity threshold (if supported by CLI usage)
-severity: HIGH        # Filter checks with a minimum severity level
-
-# Enable framework filtering to only Terraform and Azure resources
+# Framework filtering - only scan Terraform files and Azure resources
 framework:
   - terraform
   - azure
 
-# Exclude directories
+# Exclude unnecessary directories
 directory-exclude:
-  - .git
-  - .terraform
-  - test
-  - examples
+  - .git             # Exclude the .git directory
+  - .terraform       # Exclude Terraform's hidden files
