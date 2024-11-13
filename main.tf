@@ -97,5 +97,8 @@ module "managed_identity" {
   identity_name       = var.identity_name
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
+
+  # Define the scope for the role assignment
+  scope = "/subscriptions/${var.subscription_id}/resourceGroups/${azurerm_resource_group.rg.name}"
 }
 
