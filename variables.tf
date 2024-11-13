@@ -162,3 +162,7 @@ variable "identity_name" {
   description = "The name of the User Assigned Managed Identity"
   type        = string
 }
+ variable "scope" {
+  description = "The scope for the role assignment (e.g., a resource group or subscription)"
+  type        = string
+}
