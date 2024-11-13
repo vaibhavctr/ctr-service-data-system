@@ -15,6 +15,16 @@ variable "client_id" {
   type        = string
 }
 
+variable "user_assigned_identity_client_id" {
+  description = "The Client ID of the User Assigned Managed Identity (UAMI)"
+  type        = string
+}
+
+variable "use_msi" {
+  description = "Boolean flag to enable Managed Identity (UAMI) authentication"
+  type        = bool
+  default     = false
+}
 variable "storage_account_name" {
   description = "The storage account where the state file is stored"
   type        = string
