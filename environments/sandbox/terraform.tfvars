@@ -4,7 +4,8 @@ environment                      = "Development" # Specify the environment (dev,
 subscription_id                  = "2ef25ed3-e720-486d-b108-694985080ca7"
 tenant_id                        = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
 client_id                        = "d8261153-061a-4582-b9e2-2b9325595332"
-use_msi                          = false
+use_oidc                         = false
+use_msi                          = true
 
 
 ######################################################################

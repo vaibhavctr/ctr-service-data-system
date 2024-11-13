@@ -20,6 +20,12 @@ variable "user_assigned_identity_client_id" {
   type        = string
 }
 
+variable "use_oidc" {
+  description = "Enable OIDC authentication (e.g., for GitHub Actions)"
+  type        = bool
+  default     = false
+}
+
 variable "use_msi" {
   description = "Boolean flag to enable Managed Identity (UAMI) authentication"
   type        = bool
