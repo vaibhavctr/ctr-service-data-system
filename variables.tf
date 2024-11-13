@@ -187,3 +187,8 @@ variable "identity_name" {
   description = "The scope for the role assignment (e.g., a resource group or subscription)"
   type        = string
 }
+
+variable "aad_group_object_id" {
+  description = "Object ID of the Azure AD group for developers"
+  type        = string
+}

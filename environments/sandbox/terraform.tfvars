@@ -68,6 +68,7 @@ identity_name = "ctr-dev-westeu-uami"
 scope = "/subscriptions/2ef25ed3-e720-486d-b108-694985080ca7/resourceGroups/ctr-dev-westeu-rg0511"
 user_assigned_identity_client_id = "e28d1a5f-2a98-4be8-8a70-2cb3f4dcc9d5"
 user_assigned_identity_object_id = "a32b7793-6e41-4aaa-bb86-55741bd2cc99"
+aad_group_object_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 
 ######################################################################

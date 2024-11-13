@@ -110,3 +110,10 @@ module "role_assignment" {
   principal_id          = var.user_assigned_identity_object_id  # Pass the UAMI object ID
 }
 
+# Assign a role to an AAD group
+module "aad_group_role_assignment" {
+  source              = "./modules/role_assignment"
+  principal_id        = var.aad_group_object_id                    # Pass the AAD group object ID
+  role_definition_name = "Reader"
+  scope               = azurerm_storage_account.sa.id             # Assign to the storage account
+}
