@@ -8,6 +8,7 @@ use_oidc                         = false
 use_msi                          = true
 
 
+
 ######################################################################
 
 # Storage Account Configuration
@@ -65,6 +66,8 @@ app_insights_name = "ctr-dev-westeu-api"
 # User Assigned Managed Identity Configuration
 identity_name = "ctr-dev-westeu-uami"
 scope = "/subscriptions/2ef25ed3-e720-486d-b108-694985080ca7/resourceGroups/ctr-dev-westeu-rg0511"
+user_assigned_identity_client_id = "your-uami-client-id"
+
 
 ######################################################################
 
