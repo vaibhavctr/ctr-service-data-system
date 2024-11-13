@@ -20,6 +20,11 @@ variable "user_assigned_identity_client_id" {
   type        = string
 }
 
+variable "user_assigned_identity_object_id" {
+  description = "The object ID of the user-assigned managed identity."
+  type        = string
+}
+
 variable "use_oidc" {
   description = "Enable OIDC authentication (e.g., for GitHub Actions)"
   type        = bool

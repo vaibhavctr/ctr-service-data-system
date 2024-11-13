@@ -102,3 +102,11 @@ module "managed_identity" {
   scope = "/subscriptions/${var.subscription_id}/resourceGroups/${azurerm_resource_group.rg.name}"
 }
 
+# Call the Role Assignment module
+module "role_assignment" {
+  source                = "./modules/role_assignment"
+  scope                 = azurerm_resource_group.rg.id  # Reference the resource group ID
+  role_definition_name  = "Contributor"                 # Assign Contributor role
+  principal_id          = var.user_assigned_identity_object_id  # Pass the UAMI object ID
+}
+
