@@ -24,16 +24,16 @@ resource "azurerm_key_vault_access_policy" "key_access_policy" {
   object_id    = var.object_id # This should be the principal (user, app, or managed identity) needing access
 
   key_permissions = [
-    "get",
-    "list",
-    "encrypt",
-    "decrypt"
+    "Get",
+    "List",
+    "Encrypt",
+    "Decrypt"
   ]
 }
 
 # Example secret resource (optional, can be removed if secrets aren't required)
-resource "azurerm_key_vault_secret" "secret" {
-  name         = var.secret_name
-  value        = var.secret_value
-  key_vault_id = azurerm_key_vault.key_vault.id
-}
+#resource "azurerm_key_vault_secret" "secret" {
+#  name         = var.secret_name
+#  value        = var.secret_value
+#  key_vault_id = azurerm_key_vault.key_vault.id
+#}
