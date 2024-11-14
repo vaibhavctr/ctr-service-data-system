@@ -180,7 +180,7 @@ variable "identity_name" {
   type        = string
 }
 
-variable "aad_group_object_id" {
-  description = "Object ID of the Azure AD group for developers"
-  type        = string
-}
+#variable "aad_group_object_id" {
+#  description = "Object ID of the Azure AD group for developers"
+#  type        = string
+#}
