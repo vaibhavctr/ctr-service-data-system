@@ -52,7 +52,7 @@ sku_capacity_eventhub   = 1
 
 # Key Vault Configuration
 key_vault_name = "ctr-dev-westeu-kv"
-tenant_id      = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
+#tenant_id      = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
 object_id      = "a32b7793-6e41-4aaa-bb86-55741bd2cc99" # Replace with the actual Object ID
 #secret_name   = "ctr-secret-dev"
 #secret_value  = "ctr-secret-value"
