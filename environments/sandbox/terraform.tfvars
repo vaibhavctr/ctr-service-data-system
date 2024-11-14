@@ -52,9 +52,10 @@ sku_capacity_eventhub   = 1
 
 # Key Vault Configuration
 key_vault_name = "ctr-dev-westeu-kv"
-#tenant_id      = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
-secret_name  = "ctr-secret-dev"
-secret_value = "ctr-secret-value"
+tenant_id      = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
+object_id      = "a32b7793-6e41-4aaa-bb86-55741bd2cc99" # Replace with the actual Object ID
+#secret_name   = "ctr-secret-dev"
+#secret_value  = "ctr-secret-value"
 
 ######################################################################
 
@@ -68,7 +69,7 @@ identity_name = "ctr-dev-westeu-uami"
 scope = "/subscriptions/2ef25ed3-e720-486d-b108-694985080ca7/resourceGroups/ctr-dev-westeu-rg0511"
 user_assigned_identity_client_id = "e28d1a5f-2a98-4be8-8a70-2cb3f4dcc9d5"
 user_assigned_identity_object_id = "a32b7793-6e41-4aaa-bb86-55741bd2cc99"
-aad_group_object_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+#aad_group_object_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 
 
 ######################################################################

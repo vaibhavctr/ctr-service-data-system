@@ -158,16 +158,8 @@ variable "key_vault_name" {
   description = "The name of the Key Vault"
   type        = string
 }
-
-# Declare secret_name variable
-variable "secret_name" {
-  description = "The name of the secret in the Key Vault"
-  type        = string
-}
-
-# Declare secret_value variable
-variable "secret_value" {
-  description = "The value of the secret to store in the Key Vault"
+variable "object_id" {
+  description = "The Object ID of the principal requiring Key Vault access"
   type        = string
 }
 

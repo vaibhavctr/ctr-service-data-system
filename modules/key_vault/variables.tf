@@ -21,13 +21,7 @@ variable "environment" {
   description = "The environment (dev, prod, etc.)"
   type        = string
 }
-
-variable "secret_name" {
-  description = "The name of the secret"
-  type        = string
-}
-
-variable "secret_value" {
-  description = "The value of the secret"
+variable "object_id" {
+  description = "The Object ID of the user, app, or managed identity needing access"
   type        = string
 }
