@@ -34,15 +34,15 @@ variable "location" {
   type        = string
 }
 
-variable "user_assigned_identity_client_id" {
-  description = "The Client ID of the User Assigned Managed Identity (UAMI)"
-  type        = string
-}
+#variable "user_assigned_identity_client_id" {
+#  description = "The Client ID of the User Assigned Managed Identity (UAMI)"
+#  type        = string
+#}
 
-variable "user_assigned_identity_object_id" {
-  description = "The object ID of the user-assigned managed identity."
-  type        = string
-}
+#variable "user_assigned_identity_object_id" {
+#  description = "The object ID of the user-assigned managed identity."
+#  type        = string
+#}
 
 variable "use_oidc" {
   description = "Enable OIDC authentication (e.g., for GitHub Actions)"
@@ -159,10 +159,10 @@ variable "key_vault_name" {
   type        = string
 }
 
-variable "object_id" {
-  description = "The Object ID of the principal requiring Key Vault access"
-  type        = string
-}
+#variable "object_id" {
+#  description = "The Object ID of the principal requiring Key Vault access"
+#  type        = string
+#}
 
 
 # Declare app_insights_name variable
