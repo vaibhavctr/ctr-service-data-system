@@ -78,7 +78,6 @@ module "key_vault" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   tenant_id           = var.tenant_id
- #object_id           = var.object_id # Add object_id to pass it to the module
   environment         = var.environment
 }
 
