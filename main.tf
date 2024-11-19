@@ -78,7 +78,7 @@ module "key_vault" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   tenant_id           = var.tenant_id
-  object_id           = var.object_id # Add object_id to pass it to the module
+ #object_id           = var.object_id # Add object_id to pass it to the module
   environment         = var.environment
 }
 
@@ -105,7 +105,7 @@ module "role_assignment" {
   source               = "./modules/role_assignment"
   scope                = azurerm_resource_group.rg.id         # Reference the resource group ID
   role_definition_name = "Contributor"                        # Assign Contributor role
-  principal_id         = var.user_assigned_identity_object_id # Pass the UAMI object ID
+  #principal_id         = var.user_assigned_identity_object_id # Pass the UAMI object ID
 }
 
 # Assign a role to an AAD group
