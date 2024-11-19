@@ -1,4 +1,4 @@
 # backend.tfvars
-client_id        = "86e508b5-e767-4ff7-bd39-4bdd73c2edc0"
-subscription_id  = "2ef25ed3-e720-486d-b108-694985080ca7"
-tenant_id        = "adb53b4f-b05f-4dcb-a2e1-9111380568c3"
+client_id        = "1a9aba57-00ca-4abd-a665-60597275db77"
+subscription_id  = "a1fd2c95-863c-4813-929e-e73460c55005"
+tenant_id        = "deb87405-c3fd-48f8-af81-65ca6d8d8e57"
