@@ -21,7 +21,7 @@ variable "environment" {
   description = "The environment (dev, prod, etc.)"
   type        = string
 }
-variable "object_id" {
-  description = "The Object ID of the user, app, or managed identity needing access"
-  type        = string
-}
+#variable "object_id" {
+#  description = "The Object ID of the user, app, or managed identity needing access"
+#  type        = string
+#}
